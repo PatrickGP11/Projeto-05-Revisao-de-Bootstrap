@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Loja Virtual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-bag-check"></i> TechStore</a>
+            <div class="ms-auto">
+                <button class="btn btn-light position-relative" type="button">
+                    <i class="bi bi-cart3"></i> Carrinho
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <h2 class="mb-4 fw-bold">Finalizar Pedido</h2>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Dados de Cobrança</h5>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control is-valid" id="nomeCompleto"
+                                        placeholder="Nome completo" value="João Silva">
+                                    <label for="nomeCompleto">Nome completo</label>
+                                    <div class="valid-feedback">Parece bom!</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control is-invalid" id="email" placeholder="E-mail"
+                                        value="joao@email">
+                                    <label for="email">E-mail</label>
+                                    <div class="invalid-feedback">Insira um e-mail válido.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
+                                    <label for="telefone">Telefone</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                                    <label for="endereco">Endereço</label>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                                    <label for="cidade">Cidade</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <select class="form-select" id="estado">
+                                        <option selected disabled value="">Selecione...</option>
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                        <option>MG</option>
+                                    </select>
+                                    <label for="estado">Estado</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="cep" placeholder="CEP">
+                                    <label for="cep">CEP</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Informações de Pagamento</h5>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label">Número do Cartão</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
+                                    <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="validade" placeholder="MM/AA">
+                                    <label for="validade">Validade (MM/AA)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                                    <label for="cvv">CVV</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nomeCartao"
+                                        placeholder="Nome no cartão">
+                                    <label for="nomeCartao">Nome impresso no cartão</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Cupom de Desconto</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Código promocional">
+                            <button class="btn btn-outline-primary" type="button">Aplicar</button>
+                        </div>
+                        <div class="valid-feedback d-block mt-1">Cupom aplicado! 10% de desconto.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card shadow-sm sticky-top" style="top: 80px;">
+                    <div class="card-body p-4">
+                        <h5 class="card-title d-flex justify-content-between align-items-center mb-4">
+                            Resumo do Pedido
+                            <span class="badge bg-primary rounded-pill">3 itens</span>
+                        </h5>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Notebook Gamer
+                                <span>R$ 4.999,00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Mouse Wireless
+                                <span>R$ 249,90</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Teclado Mecânico
+                                <span>R$ 599,00</span>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center px-0 text-success">
+                                Cupom TECH10
+                                <span>-R$ 584,89</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0 fw-bold">
+                                Total
+                                <span>R$ 5.263,01</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary w-100 btn-lg">
+                            <i class="bi bi-lock"></i> Finalizar Compra
+                        </button>
+                        <p class="text-muted small text-center mt-2 mb-0">Pagamento seguro via SSL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0 small">© 2026 TechStore – Checkout de E-commerce | Bootstrap 5</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
